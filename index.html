@@ -34,7 +34,7 @@
                 <img src="https://img.youtube.com/vi/cs15QqG6Gjc/maxresdefault.jpg" />
             </a>
             
-            <a href="https://www.youtube.com/watch?v=nCmIwcycUJ8">
+            <a href="#" onclick="changeURL(2);">
                 <img src="https://img.youtube.com/vi/nCmIwcycUJ8/maxresdefault.jpg" />
             </a>
             <a href="https://www.youtube.com/watch?v=FvRmEapoHRc">
@@ -51,10 +51,14 @@
 
 <script>
    function changeURL(pagina){
+       var newURL="";
        if (pagina==1){
         var newURL = "https://www.youtube.com/watch?v=cs15QqG6Gjc";
-        document.getElementById("referencia").src = newURL;
        }
+       if (pagina==2){
+        var newURL = "https://www.youtube.com/watch?v=nCmIwcycUJ8";
+       }
+       document.getElementById("referencia").src = newURL;
     }
 </script>
     
