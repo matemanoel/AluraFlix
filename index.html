@@ -11,24 +11,10 @@
 </head>
 
 <body>
-    <header>MTM-VIDEOS</header>
 
-    <section class="chamada">
-        <div class="chamada-texto">
-            <h1>ATRAVÉS DO ARANHAVERSO</h1>
-            <p>#homem-aranha</p>
-        </div>
-
-        <div>
-            <iframe id="referencia" width="560" height="315" src="https://www.youtube.com/embed/gt_fAE1Eg2Q?si=EEv-tsY_b1B2OwKE"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </section>
+    <header>Minha Lista</header>
 
     <section class="categoria">
-        <h2>Filmes e séries</h2>
         <div class="categoria-videos">
             <a href="#" onclick="changeURL(1);">
                 <img src="https://img.youtube.com/vi/cs15QqG6Gjc/maxresdefault.jpg" />
@@ -36,29 +22,60 @@
             <a href="#" onclick="changeURL(2);">
                 <img src="https://img.youtube.com/vi/nCmIwcycUJ8/maxresdefault.jpg" />
             </a>
-            <a href="https://www.youtube.com/watch?v=FvRmEapoHRc">
+            <a href="#" onclick="changeURL(3);">
                 <img src="https://img.youtube.com/vi/FvRmEapoHRc/maxresdefault.jpg" />
             </a>
-            <a href="https://www.youtube.com/watch?v=Ipkw_hWW-Hw">
+            <a href="#" onclick="changeURL(4);">
                 <img src="https://img.youtube.com/vi/Ipkw_hWW-Hw/maxresdefault.jpg" />
             </a>
-            <a href="https://www.youtube.com/watch?v=d4DzMNGoyis">
+            <a href="#" onclick="changeURL(5);">
                 <img src="https://img.youtube.com/vi/d4DzMNGoyis/maxresdefault.jpg" />
             </a>
         </div>
     </section>
 
+    <section class="chamada">
+        <div class="chamada-texto">
+            <h1 id="informa">ANIMAÇÕES OSCAR 2023</h1>
+            <p id="para">#animações-oscar-2023</p>
+        </div>
+        <div>
+             <iframe id="referencia" width="560" height="315" 
+                src="https://www.youtube.com/embed/cs15QqG6Gjc"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+             </iframe>
+        </div>
+
+    </section>
+
 <script>
    function changeURL(pagina){
-       console.log(pagina);
-       pagina = pagina + 0;
-       console.log(pagina);
-       var newURL="";
        if (pagina==1){
-        var newURL = "https://www.youtube.com/watch?v=cs15QqG6Gjc";
+       var newURL = "https://www.youtube.com/embed/cs15QqG6Gjc";
+       document.getElementById("para").innerHTML = "#animações-oscar-2023";
+       document.getElementById("informa").innerHTML = "ANIMAÇÕES OSCAR 2023";
        }
        if (pagina==2){
-        var newURL = "https://www.youtube.com/watch?v=nCmIwcycUJ8";
+        var newURL = "https://www.youtube.com/embed/nCmIwcycUJ8";
+       document.getElementById("para").innerHTML = "#estreias-imperdiveis";
+       document.getElementById("informa").innerHTML = "ESTRÉIAS IMPERDÍVEIS";
+       }
+       if (pagina==3){
+        var newURL = "https://www.youtube.com/embed/FvRmEapoHRc";
+       document.getElementById("para").innerHTML = "#quebrou-a-maldicao";
+       document.getElementById("informa").innerHTML = "QUEBROU A MALDIÇÃO?";
+       }
+       if (pagina==4){
+        var newURL = "https://www.youtube.com/embed/Ipkw_hWW-Hw";
+       document.getElementById("para").innerHTML = "#nova-era";
+       document.getElementById("informa").innerHTML = "NOVA ERA GAMES";
+       }
+       if (pagina==5){
+        var newURL = "https://www.youtube.com/embed/d4DzMNGoyis";
+       document.getElementById("para").innerHTML = "#files-pra-fã";
+       document.getElementById("informa").innerHTML = "É UM FILME PRA FÃ?";
        }
        document.getElementById("referencia").src = newURL;
     }
