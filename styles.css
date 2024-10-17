@@ -12,10 +12,12 @@ header {
     font-size: 32px;
     color: yellow;
     background: darkblue;
+    color: yellow;
 }
 
 .chamada {
     background: blue;
+    color: yellow;
     padding-bottom: 8px;
     padding-top: 8px;
     display: flex;
